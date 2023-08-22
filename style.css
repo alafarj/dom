@@ -1,55 +1,115 @@
+/* Set background color and font for the entire body */
 body {
-    background-color: mintcream;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #E3E7E8;
+    font-family: system-ui;
 }
 
+/* Define styles for a container div */
 .container {
     width: 1000px;
     margin: auto;
-    transition: 0.5s;
+    transition: 0.5s; /* Add a smooth transition effect for changes */
 }
+
+/* Style for the header section */
 header {
     display: grid;
-    grid-template-columns: 1fr 50px;
+    grid-template-columns: 1fr 50px; /* Create a grid layout with two columns */
     margin-top: 50px;
 }
+
+/* Style for the shopping cart section within the header */
 header .shopping {
     position: relative;
     text-align: right;
 }
+
+/* Style for the shopping cart icon */
 header .shopping img {
     width: 40px;
 }
+
+/* Style for the shopping cart item count indicator */
 header .shopping span {
-    background-color: red;
+    background: red;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: aliceblue;
+    color: #fff;
     position: absolute;
     top: -5px;
     left: 80%;
     padding: 3px 10px;
 }
+
+/* Style for the list of items */
 .list {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr); /* Create a grid with three columns */
     column-gap: 20px;
     row-gap: 20px;
     margin-top: 50px;
 }
+
+/* Style for individual items in the list */
+.list .item {
+    text-align: center;
+    background-color: #DCE0E1;
+    padding: 20px;
+    box-shadow: 0 50px 50px #757676;
+    letter-spacing: 1px;
+}
+
+/* Style for item images */
+.list .item img {
+    width: 90%;
+    height: 430px;
+    object-fit: cover;
+}
+
+/* Style for item titles */
+.list .item .title {
+    font-weight: 600;
+}
+
+/* Style for item prices */
+.list .item .price {
+    margin: 10px;
+}
+
+/* Style for buttons within items */
+.list .item button {
+    background-color: #1C1F25;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+}
+
+/* Style for the card section */
 .card {
     position: fixed;
     top: 0;
-    left: calc(100% - 500px);
+    left: 100%;
     width: 500px;
-    background-color:dimgray;
-    height: 100vh;
-    transition: 0.5s;
+    background-color: #453E3B;
+    height: 100vh; /* Set the card's height to fill the viewport */
+    transition: 0.5s; /* Add a smooth transition effect for changes */
 }
+
+/* Style for the card when it is active (visible) */
+.active .card {
+    left: calc(100% - 500px); /* Slide the card in from the right when active */
+}
+
+/* Transform the container when the card is active */
+.active .container {
+    transform: translateX(-200px); /* Shift the container to the left when the card is active */
+}
+
+/* Style for the card title */
 .card h1 {
-    color:#E8BC0E;
+    color: gold;
     font-weight: 100;
     margin: 0;
     padding: 0 20px;
@@ -57,16 +117,20 @@ header .shopping span {
     display: flex;
     align-items: center;
 }
-.card .checkout {
+
+/* Style for the checkout section within the card */
+.card .checkOut {
     position: absolute;
     bottom: 0;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Create a grid with two columns */
 }
-.card .checkout div {
-    background-color: #E8BC0E;
-    width:100%;
+
+/* Style for checkout buttons */
+.card .checkOut div {
+    background-color: gold;
+    width: 100%;
     height: 70px;
     display: flex;
     justify-content: center;
@@ -74,13 +138,40 @@ header .shopping span {
     font-weight: bold;
     cursor: pointer;
 }
-.card .checkout div:nth-child(2){
-    background-color: black;
+
+/* Style for the second checkout button */
+.card .checkOut div:nth-child(2) {
+    background-color: #1C1F25;
     color: #fff;
 }
-.active .card {
-    left: calc(100% - 500px);
+
+/* Style for the list of items in the card */
+.listCard li {
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr); /* Create a grid with four columns */
+    color: #fff;
+    row-gap: 10px;
 }
-.active .container {
-    transform: translateX(-200px);
+
+/* Style for div elements within list items */
+.listCard li div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for item images in the card */
+.listCard li img {
+    width: 90%;
+}
+
+/* Style for buttons within card items */
+.listCard li button {
+    background-color: #fff5;
+    border: none;
+}
+
+/* Style for item count elements in the card */
+.listCard .count {
+    margin: 0 10px;
 }

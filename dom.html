@@ -1,36 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Defines the document type as HTML -->
+<html lang="en"> <!-- Specifies the document's language as English -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8"> <!-- Declares the character encoding for the document -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Sets compatibility with Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Defines the viewport settings for responsive design -->
+    <title>Document</title> <!-- Sets the title of the web page -->
+    <link rel="stylesheet" href="style.css"> <!-- Links an external CSS stylesheet to this HTML document -->
 </head>
-<body>
+<body class=""> <!-- Defines the beginning of the HTML body -->
 
-    <div class="container">
-        <header>
-            <h1>Your Shopping Cart</h1>
-            <div class="shopping">
-                <img src="https://icon-library.com/images/shopping-bag-icon-png/shopping-bag-icon-png-0.jpg">
-                <span class="quantity">0</span>
+    <div class="container"> <!-- Creates a container div for the page content -->
+        <header> <!-- Header section for page title and shopping cart icon -->
+            <h1>Your Shopping Cart</h1> <!-- Displays the title of the shopping cart -->
+            <div class="shopping"> <!-- Container for shopping cart icon and quantity -->
+                <img src="img/shopping.svg"> <!-- Displays a shopping cart icon -->
+                <span class="quantity">0</span> <!-- Displays the quantity of items in the cart -->
             </div>
         </header>
-        <div class="list">
 
-        </div>
-        <div class="card">
-            <h1>card</h1>
-            <ul class="listCard"></ul>
-            <div class="checkout">
-                <div class="total">0</div>
-                <div class="closeShopping">close</div>
-
-            </div>
+        <div class="list"> <!-- Container for displaying the list of shopping cart items -->
+          
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <div class="card"> <!-- Container for displaying a card with items -->
+        <h1>Card</h1> <!-- Title for the card section -->
+        <ul class="listCard"> <!-- Unordered list for displaying card items -->
+        </ul>
+        <div class="checkOut"> <!-- Container for the checkout section -->
+            <div class="total">0</div> <!-- Displays the total price of items in the cart -->
+            <div class="closeShopping">Close</div> <!-- Button to close the shopping cart -->
+        </div>
+    </div>
 
+    <script src="app.js"></script> <!-- Links an external JavaScript file to this HTML document -->
 </body>
 </html>
